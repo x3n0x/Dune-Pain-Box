@@ -1,0 +1,325 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title ""
+Date "28 apr 2014"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 7000 3700 1200 650 
+U 535DC898
+F0 "HV Power supply" 50
+F1 "PSU.sch" 50
+$EndSheet
+$Sheet
+S 6300 900  1800 700 
+U 535DC8C6
+F0 "Audio Amp" 50
+F1 "Audio.sch" 50
+$EndSheet
+$Sheet
+S 3300 3100 2050 1300
+U 535DC8E7
+F0 "Controller" 50
+F1 "Arduino + Wave + Proto.sch" 50
+$EndSheet
+$Sheet
+S 9000 2100 1800 900 
+U 535DC90E
+F0 "Hand electrodes + Sensor" 50
+F1 "Electrodes.sch" 50
+$EndSheet
+$Comp
+L ST_TYPE_RELAY K?
+U 1 1 535DC977
+P 8950 4050
+F 0 "K?" V 9350 4300 60  0000 C CNN
+F 1 "ST_TYPE_RELAY" V 9200 4600 60  0000 C CNN
+F 2 "~" H 8950 4050 60  0000 C CNN
+F 3 "~" H 8950 4050 60  0000 C CNN
+	1    8950 4050
+	0    1    1    0   
+$EndComp
+Text HLabel 8200 3900 0    60   UnSpc ~ 0
+HV +
+Text HLabel 8200 4150 0    60   UnSpc ~ 0
+HV -
+Text HLabel 10400 3000 1    60   UnSpc ~ 0
+ELECTRODE
+Text HLabel 10600 3000 1    60   UnSpc ~ 0
+ELECTRODE
+Wire Wire Line
+	8200 3900 8700 3900
+Wire Wire Line
+	8200 4150 8700 4150
+Wire Wire Line
+	9200 3900 10400 3900
+Wire Wire Line
+	10400 3900 10400 3000
+Wire Wire Line
+	9200 4150 10600 4150
+Wire Wire Line
+	10600 4150 10600 3000
+$Comp
+L SPEAKER SP?
+U 1 1 535DCA14
+P 8800 1250
+F 0 "SP?" H 8700 1500 70  0000 C CNN
+F 1 "SPEAKER" H 8700 1000 70  0000 C CNN
+F 2 "~" H 8800 1250 60  0000 C CNN
+F 3 "~" H 8800 1250 60  0000 C CNN
+	1    8800 1250
+	1    0    0    -1  
+$EndComp
+Text HLabel 8100 1150 0    60   UnSpc ~ 0
+SPK_OUT +
+Text HLabel 8100 1350 0    60   UnSpc ~ 0
+SPK_OUT -
+Wire Wire Line
+	8500 1150 8100 1150
+Wire Wire Line
+	8100 1350 8500 1350
+Text HLabel 6300 1350 2    60   UnSpc ~ 0
+AUD_IN+
+Text HLabel 6300 1450 2    60   UnSpc ~ 0
+AUD_IN-
+Text HLabel 9000 2600 2    60   UnSpc ~ 0
+CDS A
+Text HLabel 9000 2700 2    60   UnSpc ~ 0
+CDS_B
+Text HLabel 9000 2200 2    60   UnSpc ~ 0
++5V
+Text HLabel 9000 2400 2    60   UnSpc ~ 0
+LIGHT_ENABLE
+Text HLabel 6300 1000 2    60   UnSpc ~ 0
++12V
+Text HLabel 6300 1100 2    60   UnSpc ~ 0
+GND
+Text HLabel 7000 3800 2    60   UnSpc ~ 0
++12V
+Text HLabel 7000 4250 2    60   UnSpc ~ 0
+GND
+$Comp
+L ST_TYPE_RELAY K?
+U 1 1 535DCBAF
+P 3500 1150
+F 0 "K?" V 3900 1400 60  0000 C CNN
+F 1 "ST_TYPE_RELAY" V 3750 1700 60  0000 C CNN
+F 2 "~" H 3500 1150 60  0000 C CNN
+F 3 "~" H 3500 1150 60  0000 C CNN
+	1    3500 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 1000 4050 1000
+Wire Wire Line
+	4050 1000 5850 1000
+Wire Wire Line
+	5850 1000 6300 1000
+Wire Wire Line
+	5850 1000 5850 3800
+Wire Wire Line
+	5850 3800 7000 3800
+Connection ~ 5850 1000
+Wire Wire Line
+	6300 1100 5900 1100
+Wire Wire Line
+	5900 1100 5900 4250
+Wire Wire Line
+	5350 4250 5900 4250
+Wire Wire Line
+	5900 4250 7000 4250
+Wire Wire Line
+	4050 1000 4050 1250
+Wire Wire Line
+	4050 1250 3750 1250
+Connection ~ 4050 1000
+Wire Wire Line
+	2050 1000 2950 1000
+Wire Wire Line
+	2950 1000 3250 1000
+Wire Wire Line
+	2950 1000 2950 1250
+Wire Wire Line
+	2950 1250 3250 1250
+Connection ~ 2950 1000
+Text Label 2550 1000 2    60   ~ 0
+12V INPUT
+Wire Wire Line
+	3400 1700 3400 2000
+Wire Wire Line
+	8600 4800 8850 4800
+Wire Wire Line
+	8850 4800 8850 4600
+$Comp
+L DIODE D?
+U 1 1 535DCC2E
+P 3750 2000
+F 0 "D?" H 3750 2100 40  0000 C CNN
+F 1 "DIODE" H 3750 1900 40  0000 C CNN
+F 2 "~" H 3750 2000 60  0000 C CNN
+F 3 "~" H 3750 2000 60  0000 C CNN
+	1    3750 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L DIODE D?
+U 1 1 535DCC52
+P 8950 5100
+F 0 "D?" H 8950 5200 40  0000 C CNN
+F 1 "DIODE" H 8950 5000 40  0000 C CNN
+F 2 "~" H 8950 5100 60  0000 C CNN
+F 3 "~" H 8950 5100 60  0000 C CNN
+	1    8950 5100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8600 5800 8600 5100
+Wire Wire Line
+	8600 5100 8600 4800
+Wire Wire Line
+	8600 5100 8750 5100
+Wire Wire Line
+	9050 4600 9050 4800
+Wire Wire Line
+	9050 4800 9300 4800
+Wire Wire Line
+	9300 5400 9300 5100
+Wire Wire Line
+	9300 5100 9300 4800
+Wire Wire Line
+	3000 5400 9300 5400
+Wire Wire Line
+	9150 5100 9300 5100
+Connection ~ 9300 5100
+Wire Wire Line
+	2800 2000 3400 2000
+Wire Wire Line
+	3400 2000 3550 2000
+Wire Wire Line
+	3600 1700 3600 1800
+Wire Wire Line
+	3600 1800 4100 1800
+Wire Wire Line
+	4100 1800 4100 2000
+Wire Wire Line
+	4100 2000 4100 3100
+Wire Wire Line
+	4100 2000 3950 2000
+Connection ~ 4100 2000
+Text HLabel 5350 4100 0    60   UnSpc ~ 0
++5V
+Text HLabel 5350 4250 0    60   UnSpc ~ 0
+GND
+Connection ~ 5900 4250
+Wire Wire Line
+	6300 1350 5450 1350
+Wire Wire Line
+	5450 1350 5450 1700
+Wire Wire Line
+	5450 1700 5100 1700
+Wire Wire Line
+	5100 1700 5100 3100
+Wire Wire Line
+	6300 1450 5550 1450
+Wire Wire Line
+	5550 1450 5550 1800
+Wire Wire Line
+	5550 1800 5200 1800
+Wire Wire Line
+	5200 1800 5200 3100
+Wire Wire Line
+	9000 2200 6650 2200
+Wire Wire Line
+	6650 2200 6650 4100
+Wire Wire Line
+	6650 4100 6650 5800
+Wire Wire Line
+	6650 4100 5350 4100
+Text HLabel 5100 3100 3    60   UnSpc ~ 0
+AUD_IN+
+Text HLabel 5200 3100 3    60   UnSpc ~ 0
+AUD_IN-
+Text HLabel 5350 3850 0    60   UnSpc ~ 0
+CDS A
+Text HLabel 5350 3950 0    60   UnSpc ~ 0
+CDS_B
+Text HLabel 5350 3650 0    60   UnSpc ~ 0
+LIGHT_ENABLE
+Wire Wire Line
+	9000 2400 6500 2400
+Wire Wire Line
+	6500 2400 6500 3650
+Wire Wire Line
+	6500 3650 5350 3650
+Wire Wire Line
+	9000 2600 5550 2600
+Wire Wire Line
+	5550 2600 5550 3850
+Wire Wire Line
+	5550 3850 5350 3850
+Wire Wire Line
+	5350 3950 5600 3950
+Wire Wire Line
+	5600 3950 5600 2700
+Wire Wire Line
+	5600 2700 9000 2700
+Wire Wire Line
+	2800 2000 2800 5800
+Wire Wire Line
+	2800 5800 6650 5800
+Wire Wire Line
+	6650 5800 8600 5800
+Connection ~ 8600 5100
+Connection ~ 3400 2000
+Connection ~ 6650 5800
+Connection ~ 6650 4100
+Text HLabel 4100 3100 3    60   Input ~ 0
+12V_Enable
+Text HLabel 4300 3100 3    60   Input ~ 0
+PSU_CONNECT
+Wire Wire Line
+	3000 5400 3000 2250
+Wire Wire Line
+	3000 2250 4300 2250
+Wire Wire Line
+	4300 2250 4300 3100
+$EndSCHEMATC
